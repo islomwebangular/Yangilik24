@@ -1,2 +1,2 @@
-# News24
-News24-yangiliklar sayti
+# Yangilik24
+Yangilik24-yangiliklar sayti
