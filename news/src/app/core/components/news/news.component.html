@@ -1,0 +1,6 @@
+  <img class="rounded-md object-cover object-center  !w-full !h-[190px] !mb-[11px] " src={{newsItem?.urlToImage}} alt="bir nima" width="386" height="190" >
+   <a [routerLink]="['/']" class="before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  text-[#202020]  transition-colors hover:text-[#295091] ">
+  <h3 class= "!mt-0 !mb-[5px]  !font-medium !text-[17px]/[18px]">{{newsItem?.title}}</h3></a>
+  <time class=" inline-block !mt-0 font-normal text-[14px] text-[#7688A4]">{{newsItem?.publishedAt|date:"HH:mm / dd.MM.yyyy"}}</time>
+  
+ 

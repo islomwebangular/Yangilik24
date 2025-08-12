@@ -1,0 +1,32 @@
+<h2 class="!text-3xl text-[#000] !mb-5 !font-extrabold">General News</h2>
+    <div class="flex   -ml-[21px]  ">
+      <div class="flex flex-wrap   ">
+        <div class="ml-[21px] flex relative  mb-7  ">
+          <div class="!w-[700px] !py-[25px] !pr-[25px] ">
+            <time class= " inline-block font-normal !text-[14px]/[17px] text-[#7688A4] !mb-[14px]" datetime="">{{newsGeneral[2].publishedAt|date:"HH:mm / dd.MM.yyyy"}}</time>
+            <a class="before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 text-[#202020] transition-colors hover:text-[#295091]" [routerLink]="['/']"><h3 class=" !mb-[15px] !text-[26px]/[120%] !font-semibold">{{newsGeneral[2].title}}</h3></a>
+             <span class=" !text-base !font-normal">{{newsGeneral[2].description}}</span>
+          </div>
+          <div class=" !w-full h-full ">
+            <img class="rounded-md object-cover object-center !w-full !h-full " src="{{newsGeneral[2].urlToImage}}" alt=" " width="450" height="300"></div>
+        </div>
+        @for (newsGeneralItem of newsGeneral ; track newsGeneralItem) {
+          <div class=" grow !w-[386px] relative mb-5 ml-[21px] ">
+            <img class="rounded-md object-cover object-center  !w-full !h-[190px] !mb-[11px] " src="{{newsGeneralItem.urlToImage}}" alt="bir nima" width="386" height="190" >
+            <a [routerLink]="['/']" class="before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0  text-[#202020]  transition-colors hover:text-[#295091] ">
+            <h3 class= "!mt-0 !mb-[5px]  !font-medium !text-[17px]/[18px]">{{newsGeneralItem.title}}</h3></a>
+            <time class=" inline-block !mt-0 font-normal text-[14px] text-[#7688A4]">{{newsGeneralItem.publishedAt|date:"HH:mm / dd.MM.yyyy"}}</time>
+          </div>}
+      </div>
+      
+      
+      
+      <div class=" !pt-0  rounded-md  ml-[21px] flex flex-col mb-5">
+      <h2 class="!font-semibold !text-2xl/6 !text-[#202020]">Popular news</h2>
+      @for (popularNewsItem of popularNews ; track popularNewsItem) {
+       <div class="w-[300px]  bg-[#f0f0f3] py-2 grow  "> 
+        <app-popular-news [popularNews]="popularNewsItem"></app-popular-news>
+      </div>
+    }
+      </div>
+    </div>

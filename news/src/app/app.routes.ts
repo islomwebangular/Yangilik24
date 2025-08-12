@@ -1,11 +1,18 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-{path:'uzbekistan', loadComponent:()=>import("./feature/uzbekistan/uzbekistan.component")},
-{path:'economy',loadComponent:()=>import('./feature/economy/economy.component')},
-{path:'world',loadComponent:()=>import('./feature/world/world.component')},
-{path:'policy',loadComponent:()=>import('./feature/policy/policy.component')},
-{path:'society',loadComponent:()=>import('./feature/society/society.component')},
-{path:'technologies',loadComponent:()=>import('./feature/technologies/technologies.component')},
+{   
+  path:"",
+  pathMatch:"full",
+  redirectTo:"home"
+},  
+{path:'home',loadComponent:()=>import('./feature/home/home.component')},
+{path:'business',loadComponent:()=>import("./feature/business/business.component")},
+{path:'entertainment',loadComponent:()=>import('./feature/entertainment/entertainment.component')},
+{path:'general',loadComponent:()=>import('./feature/general/general.component')},
+{path:'health',loadComponent:()=>import('./feature/health/health.component')},
+{path:'science',loadComponent:()=>import('./feature/science/science.component')},
+{path:'technology',loadComponent:()=>import('./feature/technology/technology.component')},
 {path:'sport',loadComponent:()=>import('./feature/sport/sport.component')},
+
 ];
