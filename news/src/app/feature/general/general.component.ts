@@ -4,6 +4,7 @@ import { INews } from '../../core/models/INews';
 import { PopularNewsComponent } from '../../shared/components/popular-news/popular-news.component';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-general',
@@ -16,6 +17,8 @@ export default class GeneralComponent implements OnInit {
   newsService=inject(NewsService)
   newsGeneral:INews[]=[]
   popularNews:INews[]=[]
+ 
+  
 
 ngOnInit(): void {
   this.newsService.getAllNews("us","general").subscribe(response=>{
@@ -24,6 +27,7 @@ ngOnInit(): void {
   this.newsService.getAllNews("us","").subscribe(response=>{
     this.popularNews=response.articles
   })
+   
 }
 }
 

@@ -16,6 +16,7 @@ export default class HealthComponent {
   newsService=inject(NewsService)
   newsHealth:INews[]=[]
   popularNews:INews[]=[]
+ 
 
 ngOnInit(): void {
   this.newsService.getAllNews("us","health").subscribe(response=>{

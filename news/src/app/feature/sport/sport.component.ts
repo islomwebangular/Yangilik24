@@ -16,6 +16,7 @@ export default class SportComponent implements OnInit {
   newsService=inject(NewsService)
   newsSports:INews[]=[]
   popularNews:INews[]=[]
+ 
 
 ngOnInit(): void {
   this.newsService.getAllNews("us","sport").subscribe(response=>{

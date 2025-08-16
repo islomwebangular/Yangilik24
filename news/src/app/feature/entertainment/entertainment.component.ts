@@ -16,6 +16,7 @@ export default class EntertainmentComponent implements OnInit {
   newsService=inject(NewsService)
   newsEntertainment:INews[]=[]
   popularNews:INews[]=[]
+  
 
 ngOnInit(): void {
   this.newsService.getAllNews("us","entertainment").subscribe(response=>{

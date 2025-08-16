@@ -1,7 +1,8 @@
 <h2 class="!text-3xl text-[#000] !mb-5 !font-extrabold">Health News</h2>
     <div class="flex   -ml-[21px]  ">
       <div class="flex flex-wrap   ">
-        <div class="ml-[21px] flex relative  mb-7  ">
+       @if (newsHealth[2]) {
+        <div class="ml-[21px] flex relative  mb-7 h-max  ">
           <div class="!w-[700px] !py-[25px] !pr-[25px] ">
             <time class= " inline-block font-normal !text-[14px]/[17px] text-[#7688A4] !mb-[14px]" datetime="">{{newsHealth[2].publishedAt|date:"HH:mm / dd.MM.yyyy"}}</time>
             <a class="before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 text-[#202020] transition-colors hover:text-[#295091]" [routerLink]="['/']"><h3 class=" !mb-[15px] !text-[26px]/[120%] !font-semibold">{{newsHealth[2].title}}</h3></a>
@@ -10,6 +11,7 @@
           <div class=" !w-full h-full ">
             <img class="rounded-md object-cover object-center !w-full !h-full " src="{{newsHealth[2].urlToImage}}" alt=" " width="450" height="300"></div>
         </div>
+       }
         @for (newsHealthItem of newsHealth ; track newsHealthItem) {
           <div class=" grow !w-[386px] relative mb-5 ml-[21px] ">
             <img class="rounded-md object-cover object-center  !w-full !h-[190px] !mb-[11px] " src="{{newsHealthItem.urlToImage}}" alt="bir nima" width="386" height="190" >

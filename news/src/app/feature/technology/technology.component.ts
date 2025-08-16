@@ -16,6 +16,7 @@ export default class TechnologyComponent implements OnInit {
   newsService=inject(NewsService)
   newsTechnology:INews[]=[]
   popularNews:INews[]=[]
+  
 
 ngOnInit(): void {
   this.newsService.getAllNews("us","technology").subscribe(response=>{
