@@ -4,13 +4,15 @@ import { NewsService } from '../../shared/services/news.service';
 import { INews } from '../../core/models/INews';
 import { PopularNewsComponent } from '../../shared/components/popular-news/popular-news.component';
 import { DatePipe } from '@angular/common';
+import { NavbarComponent } from '../../core/components/navbar/navbar.component';
+import { FooterComponent } from '../../core/components/footer/footer.component';
 
 
 
 @Component({
   selector: 'app-business',
   standalone: true,
-  imports:[RouterLink,PopularNewsComponent,DatePipe],
+  imports:[RouterLink,PopularNewsComponent,DatePipe,NavbarComponent,FooterComponent],
   templateUrl: './business.component.html',
   styles:``
 })

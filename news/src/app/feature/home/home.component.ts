@@ -12,7 +12,7 @@ import { PopularNewsComponent } from "../../shared/components/popular-news/popul
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NewsComponent, LatestNewsComponent, PopularNewsComponent],
+  imports: [NewsComponent, LatestNewsComponent, PopularNewsComponent,NavbarComponent,FooterComponent],
   templateUrl: './home.component.html',
   styles: ``
 })

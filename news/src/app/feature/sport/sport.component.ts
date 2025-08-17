@@ -4,11 +4,13 @@ import { INews } from '../../core/models/INews';
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PopularNewsComponent } from '../../shared/components/popular-news/popular-news.component';
+import { NavbarComponent } from '../../core/components/navbar/navbar.component';
+import { FooterComponent } from '../../core/components/footer/footer.component';
 
 @Component({
   selector: 'app-sport',
   standalone: true,
-  imports: [DatePipe,RouterLink,PopularNewsComponent],
+  imports: [DatePipe,RouterLink,PopularNewsComponent,NavbarComponent,FooterComponent],
   templateUrl: './sport.component.html',
   styles: ``
 })

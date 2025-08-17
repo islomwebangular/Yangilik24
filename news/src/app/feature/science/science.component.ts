@@ -4,11 +4,13 @@ import { INews } from '../../core/models/INews';
 import { RouterLink } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { PopularNewsComponent } from '../../shared/components/popular-news/popular-news.component';
+import { NavbarComponent } from '../../core/components/navbar/navbar.component';
+import { FooterComponent } from '../../core/components/footer/footer.component';
 
 @Component({
   selector: 'app-science',
   standalone: true,
-  imports: [RouterLink,DatePipe,PopularNewsComponent],
+  imports: [RouterLink,DatePipe,PopularNewsComponent,NavbarComponent,FooterComponent],
   templateUrl: './science.component.html',
   styles: ``
 })

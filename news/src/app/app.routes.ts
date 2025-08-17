@@ -14,5 +14,6 @@ export const routes: Routes = [
 {path:'science',loadComponent:()=>import('./feature/science/science.component')},
 {path:'technology',loadComponent:()=>import('./feature/technology/technology.component')},
 {path:'sport',loadComponent:()=>import('./feature/sport/sport.component')},
-
+{path:'not-found',loadComponent:()=>import('./shared/components/not-found/not-found.component')},
+{path:'**', redirectTo:'not-found'} 
 ];

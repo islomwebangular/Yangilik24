@@ -5,11 +5,13 @@ import { PopularNewsComponent } from '../../shared/components/popular-news/popul
 import { DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { IfStmt } from '@angular/compiler';
+import { NavbarComponent } from '../../core/components/navbar/navbar.component';
+import { FooterComponent } from '../../core/components/footer/footer.component';
 
 @Component({
   selector: 'app-general',
   standalone: true,
-  imports: [ PopularNewsComponent,DatePipe, RouterLink],
+  imports: [ PopularNewsComponent,DatePipe, RouterLink,NavbarComponent,FooterComponent],
   templateUrl: './general.component.html',
   styles: ``
 })
